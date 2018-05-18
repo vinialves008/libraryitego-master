@@ -1,0 +1,25 @@
+<div class="container">
+<h1 class="titulo-formulario">{$title} Patrimônio do Livro</h1>
+<form id="formlivropatrimonio" method="post" action="/crud/livro/patrimonio/{$action}">	
+	
+	<div class="form-row">
+	<div class="col col1">
+	     <label for="formGroupExampleInput">Patrimônio do Livro</label>
+	     <input type="number" name="idpatrimonio" class="form-control" placeholder="Digite o número do Patrimônio" required>
+	    
+ 	</div>
+    	<div class="col col1">
+    		<h6 class="titulo-select-livro">Inserir Livro Referente ao Patrimônio</h6>
+			<select name="idlivro" class="form-control" required >
+				<option value="">selecione o livro</option>
+				{loop="$livro"}
+				 <option value="{$value.idlivro}">{$value.nome_livro}</option>
+		            {/loop}
+			</select>
+		</div>
+	</div>
+	<div>
+			<button type="submit" class="btn btn-primary botao">Enviar</button>
+	</div>
+</form>
+</div>

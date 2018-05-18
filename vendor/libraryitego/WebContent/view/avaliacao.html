@@ -1,0 +1,25 @@
+<h1 class="container titulo-formulario">Avaliação do Livro</h1>
+<div class="container">
+  <form action="/crud/avaliacao/insert" method="POST">
+  
+  <div class="form-row">
+    <div class="col">
+      <label>Escolher Livro pelo patrimonio</label>
+          <select type="text" name="idemprestimo" class="form-control" required>
+            <option value="">Selecione o patrimônio a ser avaliado</option>
+            {loop="$emprestimo"}
+              <option value="{$value.idemprestimo}">{$value.patrimonio_idpatrimonio}</option>
+            {/loop}
+          </select>
+    </div>
+    <div class="col">
+      <label>Faça seu Comentário</label>
+      <input type="text" name="comentario" class="form-control" placeholder="Comente sobre o livro escolhido" required>
+
+   </div> 
+
+   </div>
+   <button type="submit" class="btn btn-primary botao">Enviar</button>
+   </div>
+
+</form>

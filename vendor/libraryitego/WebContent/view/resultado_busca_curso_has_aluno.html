@@ -1,0 +1,41 @@
+<div class="container">
+	<div class="rescursohasaluno">
+		<table class="table">
+			<thead>
+				<tr>
+					 <th scope="col">CPF</th>
+					 <th scope="col">NOME</th>
+					 <th scope="col">DATA DE NASCIMENTO</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{$cpf}</td>
+					<td>{$nome_usuario}</td>
+					<td>{$dtnasc}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="rescursohasaluno">
+		<table class="table">
+			<thead>
+				<tr>
+					 <th scope="col">IDCURSO</th>
+					 <th scope="col">CURSO</th>
+					 <th scope="col">TIPO</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{$idcurso}</td>
+					<td>{$nome_curso}</td>
+					<td>{$nome_tipo}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div>
+		<a class="btn btn-primary botao" href="/crud/curso/matricula/{$idaluno}/{$idcurso}/insert">Confirmar</a>
+	</div>
+</div>

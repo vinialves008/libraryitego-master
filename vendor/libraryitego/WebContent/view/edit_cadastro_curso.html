@@ -1,0 +1,19 @@
+{include="cadastro_curso"}
+<script type="text/javascript">
+	
+	
+	$( document ).ready(function() {
+		
+			var nome_curso = "{$nome_curso}";
+			var idtipo = "{$idtipo}";
+			var idcurso = "{$idcurso}";
+		
+			$("#nome_curso").val(nome_curso);
+			$("#idtipo").val(idtipo);
+			
+			$("#formcurso").append('<input type="hidden" name="idcurso" id="idcurso">');
+			$("#idcurso").val(idcurso);
+		
+	});
+
+</script>

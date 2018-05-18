@@ -1,0 +1,62 @@
+{include="busca_turma_has_aluno"}
+
+<div class="container">
+<h1 class="titulo-formulario">{$title} Matrícula</h1>
+<form id="formcursohasaluno" method="post" action="/crud/turma/matricula/{$action}">
+	
+	
+
+ 	<table class="table">
+
+ 		<thead>
+	    <tr>
+	      <th scope="col">CPF</th>
+	      <th scope="col">NOME DO ALUNO</th>
+	      
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      
+	      <td>{$cpf}</td>
+	      <td>{$nome_usuario}</td>
+	     
+	    </tr>
+	    
+	  </tbody>
+ 	</table>
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">CÓDIGO DA TURMA</th>
+	      <th scope="col">NOME DO CURSO</th>
+	      <th scope="col">TIPO DO CURSO</th>
+	      <th scope="col">PREVISÃO DE INÍCIO</th>
+	       <th scope="col">PREVISÃO DE TÉRMINO</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>{$idturma}</td>
+	      <td>{$nome_curso}</td>
+	      <td>{$nome_tipo}</td>
+	      <td>{$data_inicio}</td>
+	      <td>{$data_termino}</td>
+	    </tr>
+	    
+	  </tbody>
+	</table>
+	
+	<div class="input-matricula">
+	     <label for="formGroupExampleInput">Número da Matrícula</label>
+	     <input type="number" id="matricula" name="matricula" class="form-control " placeholder="Digite o número da matrícula" required>
+	     <input type="hidden" name="idaluno" id="idaluno" value="{$idaluno}">
+	      <input type="hidden" class="form-control" name="idturma" id="idturma" value="{$idturma}" readonly>
+ 	</div>
+	<div class="form-row">
+    	<div class="col">
+			<button type="submit" class="btn btn-primary botao">Enviar</button>
+		</div>
+	</div>
+</form>
+</div>

@@ -1,0 +1,30 @@
+ <h1 class="container titulo-formulario">Realizar Empréstimo</h1>
+<div class="container">
+  <form action="/crud/emprestimo/insert" method="POST">
+  
+  <div class="form-row">
+    <div class="col">
+      <label>Patrimônio do Livro</label>
+          <select type="text" name="idpatrimonio" class="form-control" required>
+            <option value="">Selecione o patrimônio referente ao livro</option>
+            {loop="$patrimonio"}
+              <option value="{$value.idpatrimonio}">{$value.idpatrimonio}</option>
+            {/loop}
+          </select>
+    </div>
+    <div class="col">
+      <label>Nome do Usuário</label>
+          <select type="text" name="idusuario" class="form-control" required>
+            <option value="">Selecione o Usuário</option>
+            {loop="$usuario"}
+              <option value="{$value.idusuario}">{$value.nome_usuario} - {$value.cpf}</option>
+            {/loop}
+          </select>
+
+   </div> 
+
+   </div>
+   <button type="submit" class="btn btn-primary botao">Enviar</button>
+   </div>
+
+</form>
